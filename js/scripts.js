@@ -100,6 +100,7 @@ $(function() {
 
     // Testimonials owlCarousel
     $('.testimonials .owl-carousel').owlCarousel({
+        item: 2,
         loop:true,
         margin: 0,
         mouseDrag:false,
@@ -115,9 +116,6 @@ $(function() {
             },
             600:{
                 items:2
-            },
-            1000:{
-                items:3
             }
         }
     });

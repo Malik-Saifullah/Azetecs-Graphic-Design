@@ -37,8 +37,8 @@
 
 ---------------------------------------------------------------- */
 
-$main-color: #F51963;
-$back-gradient: linear-gradient(45deg, #F51963 0%, #FBAE20 100%);
+$main-color: #ff0000;
+$back-gradient: linear-gradient(45deg, #ff0000 0%, #272727 100%);
 $dark-shadow: 0px 10px 40px -4px rgba(0,0,0,.1); 
 $mobile-xs-screen: 480px;
 $tablet-sm-screen: 767px;
@@ -216,11 +216,13 @@ span, a, a:hover {
 		.owl-nav .owl-next{
 			right: 0;
 			opacity: 1 !important;
+			padding-left: 2px;
 		}
 
 		.owl-nav .owl-prev{
 			left: 0;
 			opacity: 1 !important;
+			padding-right: 2px;
 		}
 	}
 }
@@ -244,6 +246,9 @@ span, a, a:hover {
 	opacity: 0;
 	transition: all .4s;
 	z-index: 4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .owl-carousel .owl-nav .owl-next{
@@ -418,7 +423,7 @@ span, a, a:hover {
 
 .logo{
 	padding: 15px 0;
-	width: 100px;
+	width: 65px;
 }
 
 /* ----------------------------------------------------------------
@@ -555,8 +560,10 @@ span, a, a:hover {
 	position: absolute;
 	top: 0;
 	left: 0;
-	min-width: 100%;
-	min-height: 100%;
+	width: 100%;
+	min-height: 100vh;
+	object-fit: cover;
+	object-position: center center;
 }
 
 #particles-js{
@@ -1657,8 +1664,8 @@ span, a, a:hover {
 		}
 
 		textarea{
-			height: 180px;
-			max-height: 180px;
+			height: 171px;
+			max-height: 171px;
 			max-width: 100%;
 		}
 

@@ -93,14 +93,14 @@ span, a, a:hover {
   content: '';
   width: 80px;
   height: 1px;
-  background-color: #F51963;
+  background-color: #ff0000;
   position: absolute;
   bottom: 0;
   left: calc(50% - 40px);
 }
 
 .text-gradient {
-  background: linear-gradient(45deg, #F51963 0%, #FBAE20 100%);
+  background: linear-gradient(45deg, #ff0000 0%, #272727 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -111,7 +111,7 @@ span, a, a:hover {
 
 .sm-title {
   font-size: 13px;
-  color: #F51963 !important;
+  color: #ff0000 !important;
   letter-spacing: 1px;
   font-weight: 400;
   margin-bottom: 5px;
@@ -191,16 +191,18 @@ span, a, a:hover {
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #F51963;
+  background: #ff0000;
 }
 
 .owl-carousel:hover .owl-nav .owl-next {
   right: 0;
   opacity: 1 !important;
+  padding-left: 2px;
 }
 .owl-carousel:hover .owl-nav .owl-prev {
   left: 0;
   opacity: 1 !important;
+  padding-right: 2px;
 }
 
 .owl-theme .owl-nav {
@@ -210,7 +212,7 @@ span, a, a:hover {
 .owl-theme .owl-nav [class*=owl-] {
   position: absolute;
   top: 35%;
-  color: #F51963;
+  color: #ff0000;
   width: 35px;
   height: 35px;
   padding: 0;
@@ -222,6 +224,9 @@ span, a, a:hover {
   opacity: 0;
   transition: all .4s;
   z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .owl-carousel .owl-nav .owl-next {
@@ -272,8 +277,8 @@ span, a, a:hover {
 }
 
 .butn-bg {
-  background: #F51963;
-  border-color: #F51963;
+  background: #ff0000;
+  border-color: #ff0000;
 }
 .butn-bg:hover {
   border-color: #fff;
@@ -285,7 +290,7 @@ span, a, a:hover {
   opacity: 1;
 }
 .butn-bg:hover span {
-  color: #F51963;
+  color: #ff0000;
 }
 .butn-bg:after {
   background: #fff;
@@ -299,7 +304,7 @@ span, a, a:hover {
   border-color: #fff;
 }
 .butn-light:hover {
-  border-color: #F51963;
+  border-color: #ff0000;
 }
 .butn-light:hover:after {
   width: 100%;
@@ -310,7 +315,7 @@ span, a, a:hover {
   color: #fff;
 }
 .butn-light:after {
-  background: #F51963;
+  background: #ff0000;
 }
 
 /* ----------------------------------------------------------------
@@ -340,7 +345,7 @@ span, a, a:hover {
   transition: all .5s;
 }
 .navbar .navbar-nav .active {
-  color: #F51963 !important;
+  color: #ff0000 !important;
 }
 
 .nav-scroll {
@@ -367,7 +372,7 @@ span, a, a:hover {
 
 .logo {
   padding: 15px 0;
-  width: 100px;
+  width: 65px;
 }
 
 /* ----------------------------------------------------------------
@@ -416,7 +421,7 @@ span, a, a:hover {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #F51963;
+  background: #ff0000;
   position: absolute;
   top: 10px;
   right: 0;
@@ -478,8 +483,10 @@ span, a, a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  object-position: center center;
 }
 
 #particles-js {
@@ -508,9 +515,9 @@ span, a, a:hover {
   margin-top: -5px;
 }
 .hero .item:hover .icon {
-  background: #F51963;
+  background: #ff0000;
   color: #fff;
-  background: linear-gradient(45deg, #F51963 0%, #FBAE20 100%);
+  background: linear-gradient(45deg, #ff0000 0%, #272727 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -522,7 +529,7 @@ span, a, a:hover {
   box-shadow: 0px 10px 40px -4px rgba(0, 0, 0, 0.1);
   font-size: 40px;
   margin-bottom: 50px;
-  color: #F51963;
+  color: #ff0000;
   transition: all .4s;
 }
 .hero .item h6 {
@@ -538,7 +545,7 @@ span, a, a:hover {
   content: '';
   width: 70px;
   height: 1px;
-  background: #F51963;
+  background: #ff0000;
   position: absolute;
   bottom: 0;
   left: calc(50% - 35px);
@@ -557,7 +564,7 @@ span, a, a:hover {
   content: '';
   width: 70px;
   height: 1px;
-  background: #F51963;
+  background: #ff0000;
   position: absolute;
   bottom: 0;
   left: calc(50% - 35px);
@@ -577,7 +584,7 @@ span, a, a:hover {
   transition: all .4s;
 }
 .about .item .icon:hover {
-  background: #F51963;
+  background: #ff0000;
   color: #fff;
   border-color: .about .item .icon:hover main-color;
   border-style: solid;
@@ -595,7 +602,7 @@ span, a, a:hover {
 -----------------------------------------------------------------*/
 .intro .vimg {
   position: relative;
-  margin-top: 170px;
+  margin-top: -170px;
   padding-right: 50px;
 }
 .intro .vimg img {
@@ -614,7 +621,7 @@ span, a, a:hover {
   content: '';
   width: 0;
   height: 0;
-  border-bottom: 20px solid #F51963;
+  border-bottom: 20px solid #ff0000;
   border-right: 20px solid transparent;
   position: absolute;
   bottom: 1px;
@@ -627,7 +634,7 @@ span, a, a:hover {
   letter-spacing: 1px;
 }
 .intro .vimg .vid .icon {
-  color: #F51963;
+  color: #ff0000;
   font-size: 25px;
   position: absolute;
   right: 15px;
@@ -661,7 +668,7 @@ span, a, a:hover {
   height: 8px;
   width: 10%;
   border-radius: 30px;
-  background: linear-gradient(45deg, #F51963 0%, #FBAE20 100%);
+  background: linear-gradient(45deg, #ff0000 0%, #272727 100%);
   transition: all 1.5s;
 }
 
@@ -694,7 +701,7 @@ span, a, a:hover {
   text-align: center;
   border-radius: 50%;
   background: rgba(245, 25, 99, 0.05);
-  color: #F51963;
+  color: #ff0000;
 }
 .why-us .content li span {
   padding-left: 10px;
@@ -715,16 +722,16 @@ span, a, a:hover {
 .services.bg-img .tabs-icon .item .icon {
   font-size: 30px;
   margin-bottom: 15px;
-  color: #F51963;
+  color: #ff0000;
 }
 .services.bg-img .tabs-icon .item h6 {
   font-size: 16px;
 }
 .services.bg-img .tabs-icon .item span {
-  color: #F51963;
+  color: #ff0000;
 }
 .services.bg-img .tabs-icon .owl-carousel .owl-nav span {
-  color: #F51963;
+  color: #ff0000;
 }
 .services .owl-carousel .owl-stage-outer {
   box-shadow: 0px 10px 40px -4px rgba(0, 0, 0, 0.1);
@@ -739,7 +746,7 @@ span, a, a:hover {
 .services .tabs-icon .item .icon {
   font-size: 30px;
   margin-bottom: 15px;
-  color: #F51963;
+  color: #ff0000;
 }
 .services .tabs-icon .item h6 {
   font-size: 16px;
@@ -747,7 +754,7 @@ span, a, a:hover {
 .services .tabs-icon .owl-item.actived .item, .services .tabs-icon .item.active {
   color: #fff;
   position: relative;
-  background: #F51963;
+  background: #ff0000;
 }
 .services .tabs-icon .owl-item.actived .item .icon, .services .tabs-icon .item.active .icon {
   color: #fff;
@@ -760,7 +767,7 @@ span, a, a:hover {
 }
 .services .services-content .cont h5 {
   font-size: 18px;
-  color: #F51963;
+  color: #ff0000;
   margin-bottom: 10px;
 }
 .services .services-content .cont h3 {
@@ -781,7 +788,7 @@ span, a, a:hover {
 }
 .numbers .icon {
   font-size: 35px;
-  color: #F51963;
+  color: #ff0000;
   margin-bottom: 30px;
 }
 .numbers h4 {
@@ -806,7 +813,7 @@ span, a, a:hover {
   cursor: pointer;
 }
 .works .filtering .active {
-  background: #F51963;
+  background: #ff0000;
   box-shadow: 0px 10px 40px -4px rgba(0, 0, 0, 0.1);
   color: #fff;
 }
@@ -842,7 +849,7 @@ span, a, a:hover {
 }
 .works .item-img-overlay .icon:hover {
   background: #fff;
-  color: #F51963;
+  color: #ff0000;
 }
 .works .item-img-overlay .icon:before {
   line-height: 2;
@@ -881,7 +888,7 @@ span, a, a:hover {
   position: relative;
 }
 .features:before {
-  background: linear-gradient(45deg, #F51963 0%, #FBAE20 100%);
+  background: linear-gradient(45deg, #ff0000 0%, #272727 100%);
 }
 .features .shape {
   width: 102%;
@@ -923,7 +930,7 @@ span, a, a:hover {
   z-index: 7;
 }
 .features .item .icon {
-  color: #F51963;
+  color: #ff0000;
   margin-bottom: 30px;
   font-size: 30px;
 }
@@ -972,13 +979,11 @@ span, a, a:hover {
 .morfet .item .icon {
   font-size: 40px;
 }
-.morfet .item h6, .morfet .item p,.morfet .item p div  {
+.morfet .item h6, .morfet .item p {
   margin-left: 70px;
 }
-.morfet .item p,.morfet .item p div {
-    font-size: 14px;
-    
-    text-align: justify;
+.morfet .item p {
+  font-size: 14px;
 }
 
 /* ----------------------------------------------------------------
@@ -1029,7 +1034,7 @@ span, a, a:hover {
 .price .item .price p {
   font-size: 13px;
   margin-top: 5px;
-  color: #F51963;
+  color: #ff0000;
 }
 .price .item .feat ul {
   margin-bottom: 0;
@@ -1054,7 +1059,7 @@ span, a, a:hover {
   margin-top: 30px;
 }
 .price .item .order .butn {
-  border-color: #F51963 !important;
+  border-color: #ff0000 !important;
 }
 .price .item .order .butn span {
   font-size: 12px;
@@ -1073,7 +1078,7 @@ span, a, a:hover {
   text-align: center;
   height: 40px;
   line-height: 40px;
-  background: linear-gradient(45deg, #F51963 0%, #FBAE20 100%);
+  background: linear-gradient(45deg, #ff0000 0%, #272727 100%);
   color: #fff;
   top: -20px;
   left: 10%;
@@ -1167,7 +1172,7 @@ span, a, a:hover {
   border-radius: 50%;
   background: #fff;
   box-shadow: 0px 10px 40px -4px rgba(0, 0, 0, 0.1);
-  color: #F51963;
+  color: #ff0000;
   font-size: 18px;
   position: absolute;
   bottom: -25px;
@@ -1190,7 +1195,7 @@ span, a, a:hover {
   content: '';
   width: 100%;
   height: 2px;
-  background: linear-gradient(45deg, #F51963 0%, #FBAE20 100%);
+  background: linear-gradient(45deg, #ff0000 0%, #272727 100%);
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1208,7 +1213,7 @@ span, a, a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #F51963 0%, #FBAE20 100%);
+  background: linear-gradient(45deg, #ff0000 0%, #272727 100%);
   opacity: 0;
   transition: all .4s;
 }
@@ -1258,7 +1263,7 @@ span, a, a:hover {
   font-size: 50px;
   font-weight: 800;
   padding-right: 15px;
-  color: #F51963;
+  color: #ff0000;
   position: relative;
 }
 .blog .item .date span:after {
@@ -1279,7 +1284,7 @@ span, a, a:hover {
   margin: 0 5px 5px;
 }
 .blog .item .info .icon {
-  color: #F51963;
+  color: #ff0000;
   padding-right: 5px;
 }
 .blog .item h6 {
@@ -1296,7 +1301,7 @@ span, a, a:hover {
   background-color: #fff;
 }
 .blog .item .butn span {
-  color: #F51963;
+  color: #ff0000;
 }
 .blog .item .butn:hover span {
   color: #fff;
@@ -1316,8 +1321,8 @@ span, a, a:hover {
   border: 0;
 }
 .contact .form textarea {
-  height: 180px;
-  max-height: 180px;
+  height: 171px;
+  max-height: 171px;
   max-width: 100%;
 }
 .contact .form .form-group {
@@ -1357,7 +1362,7 @@ span, a, a:hover {
 .contact-info .info .item .icon {
   float: left;
   font-size: 20px;
-  color: #F51963;
+  color: #ff0000;
 }
 .contact-info .info .item .cont {
   margin-left: 40px;
@@ -1378,7 +1383,7 @@ span, a, a:hover {
   text-align: center;
 }
 .contact-info .info .social a:hover {
-  background: #F51963;
+  background: #ff0000;
 }
 .contact-info .map {
   position: relative;
@@ -1411,7 +1416,7 @@ footer .social a {
   margin: 15px 5px;
 }
 footer .social a:hover {
-  background: #F51963;
+  background: #ff0000;
 }
 footer p {
   font-weight: 400;
@@ -1465,7 +1470,7 @@ footer p {
     color: #fff !important;
   }
   .nav-scroll .navbar-collapse .active {
-    color: #F51963 !important;
+    color: #ff0000 !important;
   }
 
   .header {
@@ -1571,7 +1576,3 @@ footer p {
     line-height: 1.5;
   }
 }
-.ar-class span {
-  color : #F51963;
-}
-/*# sourceMappingURL=style.css.map */
