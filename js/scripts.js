@@ -10,44 +10,44 @@
 -----------------------------------------------------------------------------------*/
 
 
-$(function() {
+$(function () {
 
     "use strict";
 
     var wind = $(window);
 
 
-/* ----------------------------------------------------------------
-                [ Navbar ( scrollIt ) ]
------------------------------------------------------------------*/
-    
+    /* ----------------------------------------------------------------
+                    [ Navbar ( scrollIt ) ]
+    -----------------------------------------------------------------*/
+
     $.scrollIt({
-      upKey: 38,                // key code to navigate to the next section
-      downKey: 40,              // key code to navigate to the previous section
-      easing: 'swing',          // the easing function for animation
-      scrollTime: 600,          // how long (in ms) the animation takes
-      activeClass: 'active',    // class given to the active nav element
-      onPageChange: null,       // function(pageIndex) that is called when page is changed
-      topOffset: -80            // offste (in px) for fixed top navigation
+        upKey: 38, // key code to navigate to the next section
+        downKey: 40, // key code to navigate to the previous section
+        easing: 'swing', // the easing function for animation
+        scrollTime: 600, // how long (in ms) the animation takes
+        activeClass: 'active', // class given to the active nav element
+        onPageChange: null, // function(pageIndex) that is called when page is changed
+        topOffset: -80 // offste (in px) for fixed top navigation
     });
 
 
-/* ----------------------------------------------------------------
-                [ Navbar ( Change Background & Logo ) ]
------------------------------------------------------------------*/
-    
-    wind.on("scroll",function () {
+    /* ----------------------------------------------------------------
+                    [ Navbar ( Change Background & Logo ) ]
+    -----------------------------------------------------------------*/
+
+    wind.on("scroll", function () {
 
         var bodyScroll = wind.scrollTop(),
             navbar = $(".navbar"),
             logo = $(".navbar .logo> img");
 
-        if(bodyScroll > 100){
+        if (bodyScroll > 100) {
 
             navbar.addClass("nav-scroll");
             logo.attr('src', 'img/logo-dark.png');
 
-        }else{
+        } else {
 
             navbar.removeClass("nav-scroll");
             logo.attr('src', 'img/logo-light.png');
@@ -61,61 +61,60 @@ $(function() {
     });
 
 
-/* ----------------------------------------------------------------
-                [ Progress Bar ]
------------------------------------------------------------------*/
-    
+    /* ----------------------------------------------------------------
+                    [ Progress Bar ]
+    -----------------------------------------------------------------*/
+
     wind.on('scroll', function () {
         $(".skill-progress .progres").each(function () {
-            var bottom_of_object = 
-            $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = 
-            $(window).scrollTop() + $(window).height();
+            var bottom_of_object =
+                $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window =
+                $(window).scrollTop() + $(window).height();
             var myVal = $(this).attr('data-value');
-            if(bottom_of_window > bottom_of_object) {
+            if (bottom_of_window > bottom_of_object) {
                 $(this).css({
-                  width : myVal
+                    width: myVal
                 });
             }
         });
     });
 
 
-/* ----------------------------------------------------------------
-                [ Sections Background Image From Data ]
------------------------------------------------------------------*/
-    
+    /* ----------------------------------------------------------------
+                    [ Sections Background Image From Data ]
+    -----------------------------------------------------------------*/
+
     var pageSection = $(".bg-img, section");
-    pageSection.each(function(indx){
-        
-        if ($(this).attr("data-background")){
+    pageSection.each(function (indx) {
+
+        if ($(this).attr("data-background")) {
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
     });
 
 
-/* ----------------------------------------------------------------
-                [ Owl-Carousel ]
------------------------------------------------------------------*/
+    /* ----------------------------------------------------------------
+                    [ Owl-Carousel ]
+    -----------------------------------------------------------------*/
 
     // Testimonials owlCarousel
     $('.testimonials .owl-carousel').owlCarousel({
-        item: 2,
-        loop:true,
+        loop: true,
         margin: 0,
-        mouseDrag:false,
-        autoplay:true,
-        smartSpeed:500,
+        mouseDrag: false,
+        autoplay: true,
+        smartSpeed: 500,
         dots: false,
         nav: true,
-        navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1
+        navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:2
+            600: {
+                items: 2
             }
         }
     });
@@ -126,17 +125,17 @@ $(function() {
         margin: 0,
         dots: false,
         nav: true,
-        navText: ['<span class="ti-angle-left"></span>','<span class="ti-angle-right"></span>'],
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:2
+        navText: ['<span class="ti-angle-left"></span>', '<span class="ti-angle-right"></span>'],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2
             },
-            600:{
-                items:3
+            600: {
+                items: 3
             },
-            1000:{
-                items:4
+            1000: {
+                items: 4
             }
         }
     });
@@ -147,18 +146,18 @@ $(function() {
         margin: 30,
         dots: false,
         nav: true,
-        navText: ['<span class="ti-angle-left"></span>','<span class="ti-angle-right"></span>'],
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
+        navText: ['<span class="ti-angle-left"></span>', '<span class="ti-angle-right"></span>'],
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
                 margin: 0
             },
-            600:{
-                items:2
+            600: {
+                items: 2
             },
-            1000:{
-                items:4
+            1000: {
+                items: 4
             }
         }
     });
@@ -167,21 +166,21 @@ $(function() {
     $('.clients .owl-carousel').owlCarousel({
         loop: true,
         margin: 60,
-        mouseDrag:true,
+        mouseDrag: true,
         dots: false,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:2,
-                autoplay:true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2,
+                autoplay: true,
             },
-            600:{
-                items:3,
-                autoplay:true,
+            600: {
+                items: 3,
+                autoplay: true,
             },
-            1000:{
-                items:6,
-                autoplay:false,
+            1000: {
+                items: 6,
+                autoplay: false,
             }
         }
     });
@@ -193,7 +192,7 @@ $(function() {
                 [ Services Tabs ]
 -----------------------------------------------------------------*/
 
-    $(".services .tabs-icon").on("click", ".item", function(){
+    $(".services .tabs-icon").on("click", ".item", function () {
 
         $(".item").removeClass("active");
 
@@ -205,17 +204,17 @@ $(function() {
 
     });
 
-    $(".services .tabs-icon").on("click", ".owl-item", function(){
+    $(".services .tabs-icon").on("click", ".owl-item", function () {
 
         $(this).addClass("actived").siblings().removeClass("actived");
 
     });
 
 
-/* ----------------------------------------------------------------
-                [ magnificPopup ]
------------------------------------------------------------------*/
-    
+    /* ----------------------------------------------------------------
+                    [ magnificPopup ]
+    -----------------------------------------------------------------*/
+
     $('.gallery').magnificPopup({
         delegate: '.popimg',
         type: 'image',
@@ -224,18 +223,18 @@ $(function() {
         }
     });
 
-    
-/* ----------------------------------------------------------------
-                [ YouTubePopUp ]
------------------------------------------------------------------*/    
+
+    /* ----------------------------------------------------------------
+                    [ YouTubePopUp ]
+    -----------------------------------------------------------------*/
 
     $("img.aztech").YouTubePopUp();
 
 
-/* ----------------------------------------------------------------
-                [ countUp ]
------------------------------------------------------------------*/
-    
+    /* ----------------------------------------------------------------
+                    [ countUp ]
+    -----------------------------------------------------------------*/
+
     $('.numbers .count').countUp({
         delay: 10,
         time: 1500
@@ -246,87 +245,58 @@ $(function() {
 
 // === window When Loading === //
 
-$(window).on("load",function (){
+$(window).on("load", function () {
 
     var wind = $(window);
 
-/* ----------------------------------------------------------------
-                [ Preloader ]
------------------------------------------------------------------*/    
+    /* ----------------------------------------------------------------
+                    [ Preloader ]
+    -----------------------------------------------------------------*/
 
     $(".loading").fadeOut(500);
 
 
-/* ----------------------------------------------------------------
-                [ stellar ( Parallax ) ]
------------------------------------------------------------------*/
+    /* ----------------------------------------------------------------
+                    [ stellar ( Parallax ) ]
+    -----------------------------------------------------------------*/
 
     wind.stellar();
 
 
-/* ----------------------------------------------------------------
-                [ isotope Portfolio ( Masonery Style ) ]
------------------------------------------------------------------*/
-    
+    /* ----------------------------------------------------------------
+                    [ isotope Portfolio ( Masonery Style ) ]
+    -----------------------------------------------------------------*/
+
     $('.gallery').isotope({
-      // options
-      itemSelector: '.items'
+        // options
+        itemSelector: '.items'
     });
 
     var $gallery = $('.gallery').isotope({
-      // options
+        // options
     });
 
     // filter items on button click
-    $('.filtering').on( 'click', 'span', function() {
+    $('.filtering').on('click', 'span', function () {
 
         var filterValue = $(this).attr('data-filter');
 
-        $gallery.isotope({ filter: filterValue });
+        $gallery.isotope({
+            filter: filterValue
+        });
 
     });
 
-    $('.filtering').on( 'click', 'span', function() {
+    $('.filtering').on('click', 'span', function () {
 
         $(this).addClass('active').siblings().removeClass('active');
 
     });
 
-
-/* ----------------------------------------------------------------
-                [ contact form validator ]
------------------------------------------------------------------*/
-    
-    $('#contact-form').validator();
-
-    $('#contact-form').on('submit', function (e) {
-        if (!e.isDefaultPrevented()) {
-            var url = "contact.php";
-
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data)
-                {
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
-
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
-                        $('#contact-form')[0].reset();
-                    }
-                }
-            });
-            return false;
-        }
-    });
-
 });
 
 // Slider 
-$(document).ready(function() {
+$(document).ready(function () {
 
     var owl = $('.header .owl-carousel');
 
@@ -334,24 +304,24 @@ $(document).ready(function() {
     // Slider owlCarousel
     $('.slider .owl-carousel').owlCarousel({
         items: 1,
-        loop:true,
+        loop: true,
         margin: 0,
-        autoplay:true,
-        smartSpeed:500
+        autoplay: true,
+        smartSpeed: 500
     });
 
     // Slider owlCarousel
     $('.slider-fade .owl-carousel').owlCarousel({
         items: 1,
-        loop:true,
+        loop: true,
         margin: 0,
-        autoplay:true,
-        smartSpeed:500,
+        autoplay: true,
+        smartSpeed: 500,
         animateOut: 'fadeOut'
     });
 
-    owl.on('changed.owl.carousel', function(event) {
-        var item = event.item.index - 2;     // Position of the current item
+    owl.on('changed.owl.carousel', function (event) {
+        var item = event.item.index - 2; // Position of the current item
         $('h1').removeClass('animated fadeInRight');
         $('p').removeClass('animated fadeInUp');
         $('.butn').removeClass('animated zoomIn');
@@ -359,30 +329,31 @@ $(document).ready(function() {
         $('.owl-item').not('.cloned').eq(item).find('p').addClass('animated fadeInUp');
         $('.owl-item').not('.cloned').eq(item).find('.butn').addClass('animated zoomIn');
     });
-    
+
     text_arr = [];
     click_arr = [];
-    for(var i=0;i<6;i++){
-        
-        var html = $("#show-hide-"+i).html().trim();
+    for (var i = 0; i < 6; i++) {
+
+        var html = $("#show-hide-" + i).html().trim();
         text_arr.push(html);
         click_arr.push(1);
         showmore(i);
     }
 
 });
-function showmore(number){
+
+function showmore(number) {
     var html = text_arr[number];
-    
-   
-   if(click_arr[number]%2 ==0){ 
-    var btn = '<a href="javascript:void(0)" class="ar-class" onclick="showmore('+number+')"><span>See less</span></a>';
-    html+='&nbsp;&nbsp;'+btn;
-    $("#show-hide-"+number).html(html)
-   }else{ 
-    var btn = '<a href="javascript:void(0)" class="ar-class" onclick="showmore('+number+')"><span>See more</span></a>';
-       var html2 = html.substr(0,200);
-        $("#show-hide-"+number).html(html2+'&nbsp;&nbsp;'+btn)
-   }
-   click_arr[number]++;
+
+
+    if (click_arr[number] % 2 == 0) {
+        var btn = '<a href="javascript:void(0)" class="ar-class" onclick="showmore(' + number + ')"><span>See less</span></a>';
+        html += '&nbsp;&nbsp;' + btn;
+        $("#show-hide-" + number).html(html)
+    } else {
+        var btn = '<a href="javascript:void(0)" class="ar-class" onclick="showmore(' + number + ')"><span>See more</span></a>';
+        var html2 = html.substr(0, 200);
+        $("#show-hide-" + number).html(html2 + '&nbsp;&nbsp;' + btn)
+    }
+    click_arr[number]++;
 }
