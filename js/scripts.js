@@ -347,13 +347,13 @@ function showmore(number) {
 
 
     if (click_arr[number] % 2 == 0) {
-        var btn = '<a href="javascript:void(0)" class="ar-class" onclick="showmore(' + number + ')"><span>See less</span></a>';
+        var btn = '<a href="javascript:void(0)" class="ar-class" style="color:#a50d0d;" onclick="showmore(' + number + ')"><span>See less</span></a>';
         html += '&nbsp;&nbsp;' + btn;
-        $("#show-hide-" + number).html(html)
+        $("#show-hide-" + number).html(html);
     } else {
-        var btn = '<a href="javascript:void(0)" class="ar-class" onclick="showmore(' + number + ')"><span>See more</span></a>';
+        var btn = '<a href="javascript:void(0)" class="ar-class" style="color:#a50d0d;" onclick="showmore(' + number + ')"><span>See more</span></a>';
         var html2 = html.substr(0, 200);
-        $("#show-hide-" + number).html(html2 + '&nbsp;&nbsp;' + btn)
+        $("#show-hide-" + number).html(html2 + '&nbsp;&nbsp;' + btn);
     }
     click_arr[number]++;
 }
